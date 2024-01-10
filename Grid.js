@@ -1,4 +1,4 @@
-const GRID_SIZE = 10
+const GRID_SIZE = 4
 const CELL_SIZE = 20
 const CELL_GAP = 2
 
@@ -13,7 +13,7 @@ export default class Grid {
         this.#cells = createCellElements(gridElement).map((cellElement, index) => {
             return new Cell(cellElement, index % GRID_SIZE, Math.floor(index / GRID_SIZE))
         })
-        
+
     }
 
     get cells() {
@@ -54,7 +54,7 @@ class Cell {
     #mergeTile
 
     constructor(cellElement, x, y) {
-        this.#cellElement= cellElement
+        this.#cellElement = cellElement
         this.#x = x
         this.#y = y
     }
